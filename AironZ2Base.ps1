@@ -17,12 +17,7 @@ Configuration AironZ2Base {
         cChocoInstaller installChoco {
             InstallDir = "$env:ProgramData\chocolatey"
         }
-        
-        File createTempDir {
-            DestinationPath = 'C:\TEMP'
-            Ensure = 'Present'
-        }
-
+                
         xRemoteFile downloadVMIX {
             DestinationPath = 'C:\TEMP\vmix23.exe'
             URI = "http://softserv.ru/packages/vmix23.exe"            
