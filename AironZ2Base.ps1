@@ -19,13 +19,13 @@ Configuration AironZ2Base {
         }
         
         xRemoteFile downloadVMIX {
-            DestinationPath = "$env:TEMP/vmix23.exe"
-            URI = "http://telesto.dotserv.ru/vmix23.exe"            
+            DestinationPath = '$env:TEMP/vmix23.exe'
+            URI = "http://softserv.ru/packages/vmix23.exe"            
         }
 
         xRemoteFile downloadBlackMagicDrivers {
-            DestinationPath = "$env:TEMP/DesktopVideoInstaller.msi"
-            URI = "http://telesto.dotserv.ru/Desktop Video Installer v11.6.msi"            
+            DestinationPath = '$env:TEMP/DesktopVideoInstaller.msi'
+            URI = "http://softserv.ru/packages/Desktop_Video_Installer_v11.6.msi"            
         }
         
         cChocoPackageInstallerSet installBaseSoftware {
@@ -42,7 +42,7 @@ Configuration AironZ2Base {
 
         xPackage installBlackMagicDrivers {
             Name = 'Blackmagic Desktop Video'
-            Path = "$env:TEMP\DesktopVideoInstaller.msi"
+            Path = '$env:TEMP\DesktopVideoInstaller.msi'
             Arguments = "/norestart"
             Ensure = 'Present'
             ProductID = '79AA24FA-1930-4C63-9335-BB619FCA6B33'
@@ -54,4 +54,4 @@ Configuration AironZ2Base {
 
 }
 
-AironZ2Base
+AironZ2Base -Out .\mof\
