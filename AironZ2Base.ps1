@@ -18,13 +18,19 @@ Configuration AironZ2Base {
             InstallDir = "$env:ProgramData\chocolatey"
         }
         
+        File createTempDir {
+            DestinationPath = 'C:\TEMP'
+            Ensure = 'Present'
+        }
+
         xRemoteFile downloadVMIX {
-            DestinationPath = '$env:TEMP/vmix23.exe'
+            DestinationPath = 'C:\TEMP\vmix23.exe'
             URI = "http://softserv.ru/packages/vmix23.exe"            
         }
 
+        
         xRemoteFile downloadBlackMagicDrivers {
-            DestinationPath = '$env:TEMP/DesktopVideoInstaller.msi'
+            DestinationPath = 'C:\TEMP\DesktopVideoInstaller.msi'
             URI = "http://softserv.ru/packages/Desktop_Video_Installer_v11.6.msi"            
         }
         
@@ -42,7 +48,7 @@ Configuration AironZ2Base {
 
         xPackage installBlackMagicDrivers {
             Name = 'Blackmagic Desktop Video'
-            Path = '$env:TEMP\DesktopVideoInstaller.msi'
+            Path = 'C:\TEMP\DesktopVideoInstaller.msi'
             Arguments = "/norestart"
             Ensure = 'Present'
             ProductID = '79AA24FA-1930-4C63-9335-BB619FCA6B33'

@@ -10,5 +10,5 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/alexey-saveliev/Airon-
 Start-DscConfiguration -Path $env:temp -Force -Wait -Verbose
 ```
 ```
-. $env:temp\vmix23.exe
+. C:\TEMP\vmix23.exe
 ```
