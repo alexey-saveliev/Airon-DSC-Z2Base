@@ -23,7 +23,8 @@ Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/alexey-saveliev/Airon-
 Start-DscConfiguration -Path $env:temp -Force -Wait -Verbose
 ```
 4. Вручную установить VMIX для чего запустить программу установки командой
-```. C:\TEMP\vmix23.exe
+```
+. C:\TEMP\vmix23.exe
 ```
 5. Если при применении конфигурации на шаге три возникали ошибки. повторно применить конфигурацию командой
 ```
